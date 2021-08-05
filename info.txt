@@ -1,0 +1,43 @@
+Curso: Introcucción al Paradigma de Objetos 9hs.
+Días: Jueves 19:00 a 22:00 hs
+Profe: Carlos Ríos		carlos.rios@educacionit.com
+
+Materiales:		alumni.educacionit.com
+				user: email
+				pass: dni
+			
+Github: 		https://github.com/crios2020/paradigmaJuevesNoche
+
+
+# Python
+class Auto:
+    
+    #atributos
+    marca = ''
+    modelo = ''
+    color = ''
+    velocidad = 0
+     
+    #métodos
+    def acelerar():
+        velocidad = velocidad + 10
+         
+    def frenar():
+        velocidad = velocidad - 10
+#end class Auto
+   
+print("Hola Mundo")
+
+print("-- auto1 --")
+auto1 = Auto()
+auto1.marca = "Ford"
+auto1.modelo = "Ka"
+auto1.color = "Verde"
+auto1.acelerar()		# 10
+auto1.acelerar()		# 20
+auto1.acelerar()		# 30
+auto1.frenar()			# 20
+print(auto1.marca,' ',auto1.modelo,' ',auto1.color,' ',auto1.velodidad)
+
+
+
