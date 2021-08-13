@@ -29,6 +29,7 @@ public class Paradigma{
 		for(int a=0;a<=60;a++){
 			auto2.acelerar();
 		}
+		//auto2.velocidad = 1350;
 		//System.out.println(auto2.marca+" "+auto2.modelo+" "+auto2.color+" "+auto2.velocidad);
 		
 		//auto2.imprimirEstado();
@@ -46,16 +47,39 @@ class Auto{
 	String marca;
 	String modelo;
 	String color;
-	int velocidad;
+	private int velocidad;
 		
 	//Métodos
-	void acelerar(){
-		velocidad=velocidad+10;
+	void acelerar(){																	//acelerar
+		//velocidad=velocidad+10;
+		//if(velocidad>100) velocidad=100;
+		acelerar(10);		//Llamado a método de la misma clase
+	}
+	
+	void acelerar(int kilometros){			//método con parámetro de entrada			//acelerarInt
+		velocidad=velocidad+kilometros;
 		if(velocidad>100) velocidad=100;
 	}
 	
-	void acelerar(int kilometros){			//método con parámetro de entrada
-		velocidad=velocidad+kilometros;
+	void acelerar(int km, boolean tieneNitro){											//acelerarIntBoolean
+		if(tieneNitro == false){
+			acelerar(km);
+		} else {
+			acelerar(km*2);
+		}
+	}
+	
+	//int acelerar(int x){																//acelerarInt
+		//método sobrecargado
+	//}
+	
+	int acelerar(String x){																//acelerarString
+		//método sobrecargado
+		return 0;
+	}
+	
+	void acelerar(String x,String y){													//acelerarStringString
+		//método sobrecargado
 	}
 	
 	void frenar(){
@@ -71,3 +95,28 @@ class Auto{
 	}
 	
 }//end class
+
+
+class Combo{
+	
+	void venderNombre(String nombre){
+		vender(nombre, false, "CocaCola");
+	}
+	
+	void venderNombreAgrandado(String nombre, boolean agrandado){
+		vender(nombre, agrandado, "CocaCola");
+	}
+	
+	void vender(String nombre, boolean agrandado, String gaseosa){
+		/*
+			Proceso
+			* de
+			* Venta!!
+		*/
+	}
+	
+}
+
+
+
+
